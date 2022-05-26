@@ -23,6 +23,7 @@
     console.log(jsonData)
     const temperature = jsonData.main.temp - 273.15
     document.getElementById("current-weather").innerHTML = "<h5>The current weather is " + temperature.toFixed(0) + "°C</h5>"
+    document.getElementById("api-image").innerHTML = "<img src='http://openweathermap.org/img/wn/" + image + "@2x.png' alt='Weather Icon' width='10%'>"
   } catch (error) {
     console.log(error)
     document.getElementById("current-weather").innerHTML = "<h5>An error occured fetching the current weather.</h5>"
