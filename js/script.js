@@ -22,6 +22,7 @@
     const jsonData = await result.json()
     console.log(jsonData)
     const temperature = jsonData.main.temp - 273.15
+    const feeling = jsonData.weather[0]
     const image = feeling.icon
     document.getElementById("current-weather").innerHTML = "<h5>The current weather is " + temperature.toFixed(0) + "°C</h5>"
     document.getElementById("api-image").innerHTML = "<img src='http://openweathermap.org/img/wn/" + image + "@2x.png' alt='Weather Icon' width='10%'>"
