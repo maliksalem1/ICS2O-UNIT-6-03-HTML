@@ -26,6 +26,7 @@
     const image = feeling.icon
     const status = feeling.main
     document.getElementById("current-weather").innerHTML = "<h5>The current weather is " + temperature.toFixed(0) + "°C</h5>"
+    console.log(temperature.toFixed(0))
     document.getElementById("api-image").innerHTML = "<img src='http://openweathermap.org/img/wn/" + image + "@2x.png' alt='Weather Icon' width='10%'>"
     console.log(status)
   } catch (error) {
